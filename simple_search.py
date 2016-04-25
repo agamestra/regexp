@@ -24,7 +24,7 @@ REGEXP_3 = '<[^>]+>'
 # s0 Wh@t i5 CamelStyle? ---> CamelStyle
 # Any simple word should match. ---> Any
 # I like regular expressions ---> like
-REGEXP_4 = '\b\w+'
+REGEXP_4 = r'\b[a-z]+[^1234567890@.?\s]+'
 
 # all those that were numbered of the camps throughout their hosts were 603550. ---> 603550
 # What is the meaning of life, the universe and everything? *42* Douglas Adams ---> 42
@@ -39,9 +39,9 @@ REGEXP_6 = ''
 # I know that cat can catch a mouse! ---> cat can catch a mouse
 # But this mouse is faster than the cat. ---> mouse is faster than the cat
 # Mouse Mickey is not a simple mouse. Tom is a dummy cat. ---> mouse. Tom is a dummy cat
-REGEXP_7 = ''
+REGEXP_7 = 'cat[^!]+|mouse.+cat'
 
 # his phone number was 892512366482. ---> 892512366482
 # I called +7 999 648-99-86 ans it was right. ---> +7 999 648-99-86
 # Some 52221 numbers should not hide phone numbers such as 8 915 747-68-99 ---> 8 915 747-68-99
-REGEXP_8 = '[8+]\W*'
+REGEXP_8 = r'[8\+][\d\s-]*\d'
